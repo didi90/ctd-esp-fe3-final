@@ -1,7 +1,7 @@
 export const routes = {
   home: "/",
   contact: "/contact",
-  detail: "/detail",
+  detail: "/detail/:id",
   favs: "/favs",
   notFound: "*",
 };
