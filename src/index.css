@@ -30,7 +30,7 @@ div.contenedor{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem; 
 }
 
 
@@ -38,8 +38,7 @@ nav{
   display: flex;
   width: 80vw;
   justify-content: flex-end; 
-  padding: 1rem;
-  max-width: 1200px;
+  padding: 1rem;  
   margin: 0 auto;
 }
 
@@ -91,6 +90,7 @@ form{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
@@ -120,8 +120,7 @@ table {
     border-spacing: 0;
     width: 100%;
     display: table;
-    border: 1px solid #ccc;
-
+    border: 1px solid #ccc;    
 }
 
 td, th {
@@ -132,6 +131,43 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+table.odontologo-info {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-family: Arial, sans-serif;
+}
+
+table.odontologo-info td {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table.odontologo-info tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table.odontologo-info tr:hover {
+  background-color: #f1f1f1;
+}
+
+table.odontologo-info td:first-child {
+  font-weight: bold;
+  width: 20%;
+  background-color: #f4f4f4;
+}
+
+table.odontologo-info td:last-child {
+  width: 80%;
+}
+
+table.odontologo-info {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .dark{

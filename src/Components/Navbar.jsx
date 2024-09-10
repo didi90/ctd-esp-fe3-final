@@ -10,7 +10,7 @@ const Navbar = () => {
     <>
       <div class="contenedor">
         <Link to={routes.home}>
-          <img src="./images/logodental.jpg" alt="" width={80} height={70} />
+          <img src="./images/logodental.jpg" alt="" width={100} height={80} />
         </Link>
         <nav className="navbar">
           <Link to={routes.home}>

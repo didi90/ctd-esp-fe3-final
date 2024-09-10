@@ -45,28 +45,38 @@ const Detail = () => {
 
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-      <p>
-        <strong>Nombre:</strong> {odontologo.name}
-      </p>
-      <p>
-        <strong>Username:</strong> {odontologo.username}
-      </p>
-      <p>
-        <strong>Email:</strong> {odontologo.email}
-      </p>
-      <p>
-        <strong>Teléfono:</strong> {odontologo.phone}
-      </p>
-      <p>
-        <strong>Sitio Web:</strong> {odontologo.website}
-      </p>
-      <p>
-        <strong>Compañía:</strong> {odontologo.company.name}
-      </p>
-      <p>
-        <strong>Dirección:</strong> {odontologo.address.street},{" "}
-        {odontologo.address.suite}, {odontologo.address.city}
-      </p>
+      <table class="odontologo-info">
+        <tr>
+          <td>
+            <strong>Nombre:</strong>
+          </td>
+          <td>{odontologo.name}</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Username:</strong>
+          </td>
+          <td>{odontologo.username}</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Email:</strong>
+          </td>
+          <td>{odontologo.email}</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Teléfono:</strong>
+          </td>
+          <td>{odontologo.phone}</td>
+        </tr>
+        <tr>
+          <td>
+            <strong>Sitio Web:</strong>
+          </td>
+          <td>{odontologo.website}</td>
+        </tr>
+      </table>
     </>
   );
 };

@@ -32,7 +32,7 @@ const Card = ({ name, username, id }) => {
         <img
           src="./images/doctor.jpg"
           alt="odontologo"
-          width="150"
+          width={150}
           height={200}
         />
         <p>Nombre: {name}</p>
