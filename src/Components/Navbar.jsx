@@ -7,18 +7,25 @@ import { routes } from "../Components/utils/routes";
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <nav className="navbar">
-      <button onClick={() => navigate(-1)}>🔙</button>
-      <Link to={routes.home}>
-        <h4>Home</h4>
-      </Link>
-      <Link to={routes.favs}>
-        <h4>Fav</h4>
-      </Link>
-      <Link to={routes.contact}>
-        <h4>Contact</h4>
-      </Link>
-    </nav>
+    <>
+      <div class="contenedor">
+        <Link to={routes.home}>
+          <img src="./images/logodental.jpg" alt="" width={80} height={70} />
+        </Link>
+        <nav className="navbar">
+          <Link to={routes.home}>
+            <h4>Home</h4>
+          </Link>
+          <Link to={routes.favs}>
+            <h4>Fav</h4>
+          </Link>
+          <Link to={routes.contact}>
+            <h4>Contact</h4>
+          </Link>
+          <img src="./images/darkmode.jpg" alt="" width={50} height={50} />
+        </nav>
+      </div>
+    </>
   );
 };
 export default Navbar;

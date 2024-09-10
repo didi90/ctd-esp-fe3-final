@@ -17,17 +17,30 @@ code {
   border: none;
   width: 100%;
   cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 h1{
   text-align: center;
 }
 
+div.contenedor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+
 nav{
   display: flex;
   width: 80vw;
-  justify-content: flex-start;
+  justify-content: flex-end; 
   padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 a{
@@ -35,7 +48,9 @@ a{
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
+
 a:hover{
   color: rgb(136, 136, 136);
 } 
@@ -50,6 +65,7 @@ footer {
   width: 90%;
   height: 40px;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 footer > img{
@@ -78,10 +94,14 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
 }
 
 .card-grid{
@@ -92,10 +112,11 @@ form{
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+  max-width: 1200px;
 }
 
 table {
- border-collapse: collapse;
+    border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
