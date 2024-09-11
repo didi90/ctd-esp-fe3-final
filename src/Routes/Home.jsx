@@ -49,6 +49,7 @@ const Home = () => {
             name={odontologo.name}
             username={odontologo.username}
             id={odontologo.id}
+            disabled={false}  // En Home, todo está habilitado
           />
         ))}
 

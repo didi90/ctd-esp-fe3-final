@@ -37,6 +37,7 @@ const Favs = () => {
               name={fav.name}
               username={fav.username}
               id={fav.id}
+              disabled={true}  // En Favs, todo está deshabilitado
             />
           ))
         ) : (

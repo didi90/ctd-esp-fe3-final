@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { routes } from "../Components/utils/routes";
 
-const Card = ({ name, username, id }) => {
+const Card = ({ name, username, id, disabled }) => {
   const [fav, setFav] = useState([]);
 
   const addFav = () => {
+    if (disabled) return;  // Si está deshabilitado, no hacer nada
+
     // Obtener los favoritos actuales del localStorage
     const existingFavs = JSON.parse(localStorage.getItem("favorites")) || [];
 
@@ -26,6 +28,7 @@ const Card = ({ name, username, id }) => {
       alert("Este elemento ya está en favoritos");
     }
   };
+
   return (
     <div className="card">
       <Link to={`/detail/${id}`}>
@@ -39,14 +42,11 @@ const Card = ({ name, username, id }) => {
         <p>UserName: {username}</p>
         <p>ID: {id}</p>
       </Link>
-      {/* En cada card deberan mostrar en name - username y el id */}
-      {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-      {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-      <Link to={routes.favs}>
-        <button onClick={addFav} className="favButton">
-          ⭐
-        </button>
-      </Link>
+
+      {/* Deshabilitar el botón si la prop 'disabled' es true */}
+      <button onClick={addFav} className="favButton" disabled={disabled}>
+        ⭐
+      </button>
     </div>
   );
 };
