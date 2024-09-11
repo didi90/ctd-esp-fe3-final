@@ -11,13 +11,13 @@ const Favs = () => {
     <div>
       <h1>Mis Favoritos</h1>
       <div className="card-grid">
-        {favorites.map((fav) => (
+        {favorites.map((odontologo) => (
           <Card
-            key={fav.id}
-            name={fav.name}
-            username={fav.username}
-            fav={fav}
-            id={fav.id}
+            key={odontologo.id}
+            name={odontologo.name}
+            username={odontologo.username}
+            odontologo={odontologo}
+            id={odontologo.id}
             // En Favs, todo está deshabilitado
           />
         ))}
