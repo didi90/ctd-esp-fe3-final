@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 const Detail = () => {
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   const { id } = useParams(); // Extraemos el id de la URL
-  const [odontologo, setOdontologo] = useState(null);
+  const [detail, setDetail] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -21,7 +21,7 @@ const Detail = () => {
           throw new Error("Error al obtener los datos");
         }
         const data = await response.json();
-        setOdontologo(data);
+        setDetail(data);
         setLoading(false);
       } catch (error) {
         setError(error.message);
@@ -41,7 +41,7 @@ const Detail = () => {
   }
   return (
     <>
-      <h1>Detail Dentist {odontologo.id} </h1>
+      <h1>Detail Dentist {detail.id} </h1>
 
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
@@ -50,31 +50,31 @@ const Detail = () => {
           <td>
             <strong>Nombre:</strong>
           </td>
-          <td>{odontologo.name}</td>
+          <td>{detail.name}</td>
         </tr>
         <tr>
           <td>
             <strong>Username:</strong>
           </td>
-          <td>{odontologo.username}</td>
+          <td>{detail.username}</td>
         </tr>
         <tr>
           <td>
             <strong>Email:</strong>
           </td>
-          <td>{odontologo.email}</td>
+          <td>{detail.email}</td>
         </tr>
         <tr>
           <td>
             <strong>Teléfono:</strong>
           </td>
-          <td>{odontologo.phone}</td>
+          <td>{detail.phone}</td>
         </tr>
         <tr>
           <td>
             <strong>Sitio Web:</strong>
           </td>
-          <td>{odontologo.website}</td>
+          <td>{detail.website}</td>
         </tr>
       </table>
     </>
